@@ -1,0 +1,50 @@
+#!/usr/bin/perl -w
+
+use warnings;
+use strict;
+use CGI;
+use Device::SerialPort;
+
+#use PackingBytes;
+
+
+# calling it PJ because ProJector
+our $pj = Device::SerialPort -> new ("/dev/ttyS0");
+
+sub setupPJ {
+        $pj -> baudrate(19200);
+        $pj -> parity('none');
+        $pj -> databits(8);
+        $pj -> stopbits(1);
+#       $pj -> handshake('none');
+#       $pj -> write_settings;
+        $pj -> read_char_time(0);
+        $pj -> read_const_time(250);
+}
+setupPJ;
+
+
+#my $cgi = CGI -> new;
+my $cgi = new CGI;
+my $value = $cgi -> param('cmd');
+
+# use one of these two:
+#$value = packing($value);
+$value =~ s/%../pack('C', hex($1))/g;
+
+
+$pj -> write($value);
+my $retValue = $pj -> read(255);
+
+
+print (
+	$cgi -> header,
+	$cgi -> h1('received:'),
+	$cgi -> h1($value),
+	$cgi -> h1('which returned:'),
+	$cgi -> h1($retValue),
+	$cgi -> start_html,
+	$cgi -> end_html
+);
+
+
