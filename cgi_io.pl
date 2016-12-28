@@ -28,6 +28,18 @@ setupPJ;
 my $cgi = new CGI;
 my $value = $cgi -> param('cmd');
 
+
+
+## FOR EXTRON COMPATIBILITY
+## STRIP THE 'W01RS|' IF IT
+## EXISTS IN THE STRING
+
+$value =~ s/^W01RS\|//i;
+
+#####
+
+
+
 # use one of these two:
 #$value = packing($value);
 $value =~ s/%../pack('C', hex($1))/g;
