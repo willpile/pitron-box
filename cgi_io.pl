@@ -1,5 +1,8 @@
 #!/usr/bin/perl -w
 
+## This script generally lives at:
+## /var/www/cgi-bin/cgi.pl
+
 use warnings;
 use strict;
 use CGI;
