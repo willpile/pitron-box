@@ -54,7 +54,6 @@ my $retValue = $pj -> read(255);
 
 print (
 	$cgi -> header,
-	$cgi -> h1($retValue),
-	$cgi -> start_html,
-	$cgi -> end_html
+	#$cgi -> h1("\n".$retValue."\n")
 );
+print $retValue;
