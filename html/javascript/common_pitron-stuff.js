@@ -62,6 +62,7 @@ Done!
 // setup other same-as-name variables
 
 var PiTronAddress = 'PiTronAddress';
+var nope = 'nope';
 
 var panasonicPJLink = 'panasonicPJLink';
 var sanyoPLC = 'sanyoPLC';
@@ -110,6 +111,27 @@ var menu_on = 'menu-on';
 var menu_right = 'menu-right';
 var menu_toggle = 'menu-toggle';
 var menu_up = 'menu-up';
+var mon1 = 'mon1';
+var mon2 = 'mon2';
+var mon3 = 'mon3';
+var mon4 = 'mon4';
+var mon5 = 'mon5';
+var mon6 = 'mon6';
+var mon7 = 'mon7';
+var mon8 = 'mon8';
+var mon9 = 'mon9';
+var mon10 = 'mon10';
+var mon11 = 'mon11';
+var mon12 = 'mon12';
+var mon13 = 'mon13';
+var mon14 = 'mon14';
+var mon15 = 'mon15';
+var mon16 = 'mon16';
+var mon17 = 'mon17';
+var mon18 = 'mon18';
+var mon19 = 'mon19';
+var mon20 = 'mon20';
+var mon_all = 'mon_all';
 var power_off = 'power-off';
 var power_on = 'power-on';
 var screen_down = 'screen-down';
@@ -123,7 +145,7 @@ var zoom_out_coarse = 'zoom-out-coarse';
 var zoom_out_fine = 'zoom-out-fine';
 
 
-
+if (Id == 'nope'){}
 
 
 
@@ -546,41 +568,111 @@ function pitronBox (address, deviceType, action)
 			This switch block takes the action you want
 			to execute, and turns it into the
 			the corresponding serial command.
+
+			lg command format = [command1][command2]%20[set ID]%20[DATA] 
 		*/
+		switch (Id)
+		{
+			case 'mon_all':
+				Id = '0'
+				break;
+			case 'mon1':
+				Id = '1'
+				break;
+			case 'mon2':
+				Id = '2'
+				break;
+			case 'mon3':
+				Id = '3'
+				break;
+			case 'mon4':
+				Id = '4'
+				break;
+			case 'mon5':
+				Id = '5'
+				break;
+			case 'mon6':
+				Id = '6'
+				break;
+			case 'mon7':
+				Id = '7'
+				break;
+			case 'mon8':
+				Id = '8'
+				break;
+			case 'mon9':
+				Id = '9'
+				break;
+			case 'mon10':
+				Id = '10'
+				break;
+			case 'mon11':
+				Id = '11'
+				break;
+			case 'mon12':
+				Id = '12'
+				break;
+			case 'mon13':
+				Id = '13'
+				break;
+			case 'mon14':
+				Id = '14'
+				break;
+			case 'mon15':
+				Id = '15'
+				break;
+			case 'mon16':
+				Id = '16'
+				break;
+			case 'mon17':
+				Id = '17'
+				break;
+			case 'mon18':
+				Id = '18'
+				break;
+			case 'mon19':
+				Id = '19'
+				break;
+			case 'mon20':
+				Id = '20'
+				break;
+		}
 		switch (action)
 		{
 			case 'input-HDMI': // technically HDMI 1
-				command = 'xb%200%2090';
+				command = 'xb%20'+Id+'%2090';
 				break;
 			case 'input-VGA':
-				command = 'xb%200%2060';
+				command = 'xb%20'+Id+'%2060';
+			case 'input-HDMI1':
+				command = 'xb%20'+Id+'%2090';
 				break;
 			case 'menu-back':
-				command = 'mc%200%2028';
+				command = 'mc%20'+Id+'%2028';
 				break;
 			case 'menu-down':
-				command = 'mc%200%2041';
+				command = 'mc%20'+Id+'%2041';
 				break;
 			case 'menu-enter':
-				command = 'mc%200%2044';
+				command = 'mc%20'+Id+'%2044';
 				break;
 			case 'menu-left':
-				command = 'mc%200%2007';
+				command = 'mc%20'+Id+'%2007';
 				break;
 			case 'menu-right':
-				command = 'mc%200%2006';
+				command = 'mc%20'+Id+'%2006';
 				break;
 			case 'menu-toggle':
-				command = 'mc%200%2043';
+				command = 'mc%20'+Id+'%2043';
 				break;
 			case 'menu-up':
-				command = 'mc%200%2040';
+				command = 'mc%20'+Id+'%2040';
 				break;
 			case 'power-off':
-				command = 'ka%20%30%20%30';
+				command = 'ka%20'+Id+'%20%30';
 				break;
 			case 'power-on':
-				command = 'ka%20%30%20%31';
+				command = 'ka%20'+Id+'%20%31';
 				break;
 			case 'stupid-sync':
 				command = '';
