@@ -603,37 +603,37 @@ function pitronBox (address, deviceType, Id, action)
 				Id = '9'
 				break;
 			case 'mon10':
-				Id = '10'
+				Id = '0A'
 				break;
 			case 'mon11':
-				Id = '11'
+				Id = '0B'
 				break;
 			case 'mon12':
-				Id = '12'
+				Id = '0C'
 				break;
 			case 'mon13':
-				Id = '13'
+				Id = '0D'
 				break;
 			case 'mon14':
-				Id = '14'
+				Id = '0E'
 				break;
 			case 'mon15':
-				Id = '15'
+				Id = '0F'
 				break;
 			case 'mon16':
-				Id = '16'
+				Id = '10'
 				break;
 			case 'mon17':
-				Id = '17'
+				Id = '11'
 				break;
 			case 'mon18':
-				Id = '18'
+				Id = '12'
 				break;
 			case 'mon19':
-				Id = '19'
+				Id = '13'
 				break;
 			case 'mon20':
-				Id = '20'
+				Id = '14'
 				break;
 		}
 		switch (action)
