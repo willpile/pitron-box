@@ -79,12 +79,11 @@ var focus_out_coarse = 'focus-out-coarse';
 var focus_out_fine = 'focus-out-fine';
 var freeze_off = 'freeze-off';
 var freeze_on = 'freeze-on';
+var Id = 'Id';
 var image1_recall = 'image1-recall';
 var image2_recall = 'image2-recall';
 var image3_recall = 'image3-recall';
 var image4_recall = 'image4-recall';
-var input_6 = 'input-6';
-var input_7 = 'input-7';
 var input_BNC = 'input-BNC';
 var input_DVI = 'input-DVI';
 var input_HDMI = 'input-HDMI';
@@ -145,9 +144,8 @@ var zoom_out_coarse = 'zoom-out-coarse';
 var zoom_out_fine = 'zoom-out-fine';
 
 
+
 if (Id == 'nope'){}
-
-
 
 /*
 
@@ -248,9 +246,10 @@ The following devices are supported by deviceType:
 var action;
 var address;
 var deviceType;
+
 function pitronBox (address, deviceType, Id, action)
 {
-	//this is where we input the individual IP address for each pitron
+
 	var address = 'http://10.40.30.94/cgi-bin/cgi.pl'
 	//var urlStart = address + '?cmd=W' + port + 'RS|';
 	var urlStart = address + '?cmd=' ;
@@ -293,6 +292,7 @@ function pitronBox (address, deviceType, Id, action)
 			to execute, and turns it into the
 			the corresponding serial command.
 		*/
+
 		switch (action)
 		{
 			case 'auto-adjust':
@@ -546,12 +546,6 @@ function pitronBox (address, deviceType, Id, action)
 			case 'power-on':
 				command = 'POWR1   ';
 				break;
-			case 'input-6':
-				command = 'AVD6    ';
-				break;
-			case 'input-7':
-				command - 'AVD7    ';
-				break:
 		}
 		
 		// Add in Sharp's funny little end byte:
@@ -603,37 +597,37 @@ function pitronBox (address, deviceType, Id, action)
 				Id = '9'
 				break;
 			case 'mon10':
-				Id = '10'
+				Id = '0A'
 				break;
 			case 'mon11':
-				Id = '11'
+				Id = '0B'
 				break;
 			case 'mon12':
-				Id = '12'
+				Id = '0C'
 				break;
 			case 'mon13':
-				Id = '13'
+				Id = '0D'
 				break;
 			case 'mon14':
-				Id = '14'
+				Id = '0E'
 				break;
 			case 'mon15':
-				Id = '15'
+				Id = '0F'
 				break;
 			case 'mon16':
-				Id = '16'
+				Id = '10'
 				break;
 			case 'mon17':
-				Id = '17'
+				Id = '11'
 				break;
 			case 'mon18':
-				Id = '18'
+				Id = '12'
 				break;
 			case 'mon19':
-				Id = '19'
+				Id = '13'
 				break;
 			case 'mon20':
-				Id = '20'
+				Id = '14'
 				break;
 		}
 		switch (action)
