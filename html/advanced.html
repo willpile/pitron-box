@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="javascript/adv-var.js"></script>
 		<!--
 			Reminder:
-			pitronBox(address, port, deviceType, action);
+			pitronBox(address, port, advDeviceType, action);
 			address = roomName;
 			port = projectorName;
 
@@ -116,26 +116,26 @@
 				</tr>
 				<tr class="table-buttons-borderless">
 					<td class="table-buttons-borderless">
-						<a class="common simple green normal-width" onclick="pitronBox(PiTronAddress, deviceType, power_on);">Power on</a>
+						<a class="common simple green normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, power_on);">Power on</a>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common simple red normal-width" onclick="pitronBox(PiTronAddress, deviceType, power_off);">Power off</a>
-					</td>
-				</tr>
-				<tr class="table-buttons-borderless">
-					<td class="table-buttons-borderless">
-						<a class="common simple green normal-width" onclick="pitronBox(PiTronAddress, deviceType, blank_off);">Blank off</a>
-					</td>
-					<td class="table-buttons-borderless">
-						<a class="common simple red normal-width" onclick="pitronBox(PiTronAddress, deviceType, blank_on);">Blank on</a>
+						<a class="common simple red normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, power_off);">Power off</a>
 					</td>
 				</tr>
 				<tr class="table-buttons-borderless">
 					<td class="table-buttons-borderless">
-						<a class="common simple green normal-width" onclick="pitronBox(PiTronAddress, deviceType, freeze_off);">Freeze off</a>
+						<a class="common simple green normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, blank_off);">Blank off</a>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common simple red normal-width" onclick="pitronBox(PiTronAddress, deviceType, freeze_on);">Freeze on</a>
+						<a class="common simple red normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, blank_on);">Blank on</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, freeze_off);">Freeze off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, freeze_on);">Freeze on</a>
 					</td>
 				</tr>
 			</table>
@@ -158,13 +158,13 @@
 				</tr>
 				<tr class="table-buttons-borderless">
 					<td class="table-buttons-borderless">
-						<a class="common simple green width-normal" onclick="pitronBox(PiTronAddress, deviceType, menu_toggle);">Menu ON</a>
+						<a class="common simple green width-normal" onclick="pitronBox(PiTronAddress, advDeviceType, menu_toggle);">Menu ON</a>
 					</td>
 					<td class="table-buttons-borderless">
 						<br>
 					</td>
 					 <td class="table-buttons-borderless">
-						<a class="common simple red width-normal" onclick="pitronBox(PiTronAddress, deviceType, menu_off);">Menu OFF</a>
+						<a class="common simple red width-normal" onclick="pitronBox(PiTronAddress, advDeviceType, menu_off);">Menu OFF</a>
 					</td>
 				</tr>
 				<tr class="table-buttons-borderless">
@@ -179,7 +179,7 @@
 						<br>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
 					</td>
 					<td class="table-buttons-borderless">
 						<br>
@@ -187,13 +187,13 @@
 				</tr>
 				<tr class="table-buttons-borderless">
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
 					</td>
 				</tr>
 				<tr class="table-buttons-borderless">
@@ -201,7 +201,7 @@
 						<br>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
 					</td>
 					<td class="table-buttons-borderless">
 						<br>
@@ -227,7 +227,7 @@
 				</tr>
 				<tr class="table-buttons-borderless">
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, keystone_up);"><img src="graphics/arrow-up.png" alt="Keystone Up" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, keystone_up);"><img src="graphics/arrow-up.png" alt="Keystone Up" width="64" height="64"></a>
 					</td>
 				</tr>
 				<tr class="table-buttons-borderless">
@@ -237,7 +237,7 @@
 				</tr>
 				<tr class="table-buttons-borderless">
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, keystone_down);"><img src="graphics/arrow-down.png" alt="Keystone Down" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, keystone_down);"><img src="graphics/arrow-down.png" alt="Keystone Down" width="64" height="64"></a>
 					</td>
 				</tr>
 			</table>
@@ -264,7 +264,7 @@
 						<br>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, lens_shift_up);"><img src="graphics/arrow-up.png" alt="Lens Shift Up" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, lens_shift_up);"><img src="graphics/arrow-up.png" alt="Lens Shift Up" width="64" height="64"></a>
 					</td>
 					<td class="table-buttons-borderless">
 						<br>
@@ -272,13 +272,13 @@
 				</tr>
 				<tr class="table-buttons-borderless">
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, lens_shift_left);"><img src="graphics/arrow-left.png" alt="Lens Shift Left" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, lens_shift_left);"><img src="graphics/arrow-left.png" alt="Lens Shift Left" width="64" height="64"></a>
 					</td>
 					<td class="table-buttons-borderless">
 						<br>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, lens_shift_right);"><img src="graphics/arrow-right.png" alt="Lens Shift Right" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, lens_shift_right);"><img src="graphics/arrow-right.png" alt="Lens Shift Right" width="64" height="64"></a>
 					</td>
 				</tr>
 				<tr class="table-buttons-borderless">
@@ -286,7 +286,7 @@
 						<br>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, deviceType, lens_shift_down);"><img src="graphics/arrow-down.png" alt="Lens Shift Down" width="64" height="64"></a>
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, lens_shift_down);"><img src="graphics/arrow-down.png" alt="Lens Shift Down" width="64" height="64"></a>
 					</td>
 					<td class="table-buttons-borderless">
 						<br>
@@ -311,10 +311,10 @@
 				</tr>
 				<tr class="table-buttons-borderless">
 					<td class="table-buttons-borderless">
-						<a class="common simple blue normal-width" onclick="pitronBox(PiTronAddress, deviceType, focus_in);">Focus In</a>
+						<a class="common simple blue normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, focus_in);">Focus In</a>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common simple blue normal-width" onclick="pitronBox(PiTronAddress, deviceType, focus_out);">Focus Out</a>
+						<a class="common simple blue normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, focus_out);">Focus Out</a>
 					</td>
 				</tr>
 <!-- End Focus //-->
@@ -326,10 +326,10 @@
 <!-- Start Zoom //-->
 				<tr class="table-buttons-borderless">
 					<td class="table-buttons-borderless">
-						<a class="common simple blue normal-width" onclick="pitronBox(PiTronAddress, deviceType, zoom_in);">Zoom<br>In</a>
+						<a class="common simple blue normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, zoom_in);">Zoom<br>In</a>
 					</td>
 					<td class="table-buttons-borderless">
-						<a class="common simple blue normal-width" onclick="pitronBox(PiTronAddress, deviceType, zoom_out);">Zoom Out</a>
+						<a class="common simple blue normal-width" onclick="pitronBox(PiTronAddress, advDeviceType, zoom_out);">Zoom Out</a>
 					</td>
 				</tr>
 <!-- End Zoom //-->
