@@ -88,6 +88,7 @@ var input_7 = 'input-7';
 var input_BNC = 'input-BNC';
 var input_DVI = 'input-DVI';
 var input_HDMI = 'input-HDMI';
+var input_HDMI2 = 'input-HDMI2';
 var input_SVid = 'input-SVid';
 var input_VGA = 'input-VGA';
 var keystone_down = 'keystone-down';
@@ -640,6 +641,9 @@ function pitronBox (address, deviceType, Id, action)
 		{
 			case 'input-HDMI': // technically HDMI 1
 				command = 'xb%20'+Id+'%2090';
+				break;
+			case 'input-HDMI2': // HDMI 2
+				command = 'xb%20'+Id+'%2091';
 				break;
 			case 'input-VGA':
 				command = 'xb%20'+Id+'%2060';
